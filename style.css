@@ -1,0 +1,14 @@
+/*
+Theme Name: ChocoGummyBears
+Author: Joumana Laude
+Author URI: https://github.com/JoumanaLaude
+Description: Custom WordPress theme built from scratch.
+Version: 1.0
+*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
