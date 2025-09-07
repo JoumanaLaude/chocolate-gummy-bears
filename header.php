@@ -8,6 +8,7 @@
 <body <?php body_class(); ?>>
 <header id="site-header">
     <nav>
+        <button class="menu-toggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
         <?php 
         wp_nav_menu(array(
             'theme_location' => 'primary',
