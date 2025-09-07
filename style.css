@@ -12,3 +12,31 @@ body {
     padding: 0;
     background-color: #fff;
 }
+
+#site-header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+}
+
+#primary-menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#primary-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+#primary-menu a:hover {
+    color: #f06292;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}

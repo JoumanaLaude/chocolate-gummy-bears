@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <main>
-    <h1>Hello, ChocoGummyBears Theme!</h1>
+    <h1>Welcome</h1>
     <?php
     if (have_posts()) {
         while (have_posts()) {

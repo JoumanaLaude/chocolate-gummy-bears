@@ -1,0 +1,12 @@
+#hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f7c8d0;
+}
+
+#about, #featured, #reviews, #contact {
+    padding: 80px 20px;
+    text-align: center;
+}
