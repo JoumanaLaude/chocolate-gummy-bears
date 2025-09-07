@@ -23,17 +23,10 @@ function chocogummybears_enqueue_scripts() {
     wp_enqueue_style('chocogummybears-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css', array(), '7.0.1', 'all');
     
     // Google Fonts
-    wp_enqueue_style(
-    'chocogummybears-googlefonts',
-    'https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Poppins:wght@400;600&display=swap',
-    array(),
-    null
-);
+    wp_enqueue_style('chocogummybears-googlefonts', 'https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Poppins:wght@400;600&display=swap', array(), null);
 
-    // JS
-    wp_enqueue_script('chocogummybears-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '1.0', true);
+    // JS main script
+    wp_enqueue_script('chocogummybears-main', get_template_directory_uri() . '/assets/js/main.js', array(), $version, true);
 
-    // Hamburger JS
-    wp_enqueue_script('hamburger-js', get_template_directory_uri() . '/assets/js/hamburger.js', array(), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'chocogummybears_enqueue_scripts');

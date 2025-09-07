@@ -30,25 +30,22 @@ h2 {
    =============================== */
 #site-header {
     background-color: var(--color-caramel);
-    padding: 1rem 2rem;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 2rem;
     z-index: 1000;
 }
 
-/* Desktop nav menu */
-#site-header nav ul {
+#primary-menu {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
 }
 
-#site-header nav ul li a {
+#primary-menu li a {
     text-decoration: none;
     color: var(--color-chocolate);
     font-weight: 600;
@@ -56,11 +53,10 @@ h2 {
     transition: color 0.3s ease;
 }
 
-#site-header nav ul li a:hover {
-    color: var(--color-vanilla); 
+#primary-menu li a:hover {
+    color: var(--color-vanilla);
 }
 
-/* Hamburger button (mobile) */
 .menu-toggle {
     display: none;
     background: none;
@@ -72,15 +68,53 @@ h2 {
     top: 50%;
     right: 2rem;
     transform: translateY(-50%);
+    z-index: 1100;
 }
 
-/* Mobile menu - hidden by default */
-#primary-menu {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+@media (min-width: 769px) {
+    #primary-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .menu-toggle {
+        display: none; /* hide hamburger */
+    }
 }
 
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    #primary-menu {
+        display: none; /* hidden by default */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background-color: var(--color-caramel);
+        padding: 1rem 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    #primary-menu.active {
+        display: flex;
+    }
+
+    #primary-menu li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    #site-header nav {
+        position: relative; /* important for mobile menu absolute positioning */
+    }
+}
 
 /* ===============================
    Hero Section
@@ -146,7 +180,6 @@ h2 {
   color: var(--color-chocolate);
 }
 
-/* Squiggly SVG at bottom of hero */
 .hero .hero-squiggle {
   position: absolute;
   bottom: 0;
@@ -381,64 +414,6 @@ h2 {
    Responsive Media Queries
    =============================== */
 
-  /* Hamburger button (mobile) */
-.menu-toggle {
-    display: none; /* hidden by default */
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--color-chocolate);
-    position: absolute;
-    top: 50%;
-    right: 2rem;
-    transform: translateY(-50%);
-    z-index: 1100; /* above menu */
-}
-
-/* Mobile Menu */
-@media (max-width: 768px) {
-    /* Show hamburger */
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Hide menu by default */
-    #primary-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--color-caramel);
-        padding: 1rem 0;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        z-index: 1000;
-    }
-
-    /* Show menu when active */
-    #primary-menu.active {
-        display: flex;
-    }
-
-    #primary-menu li {
-        margin: 0.5rem 0;
-        text-align: center;
-    }
-
-    #site-header nav ul {
-        gap: 0; /* remove gap for vertical menu */
-    }
-}
-
-/* Desktop menu */
-@media (min-width: 769px) {
-    #primary-menu {
-        display: flex;
-        gap: 2rem;
-    }
-}
 
 /* Large tablets / small desktops */
 @media (max-width: 1200px) {

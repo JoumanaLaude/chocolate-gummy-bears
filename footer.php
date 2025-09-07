@@ -10,5 +10,7 @@
     </div>
 </footer>
 
+<?php wp_footer(); ?> <!-- Add this line -->
+
 </body>
 </html>
