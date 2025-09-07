@@ -1,12 +1,501 @@
-#hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f7c8d0;
+:root {
+  --color-strawberry: #e7b8b4;
+  --color-caramel: #D0A77B;
+  --color-lemon: #EFE8D8;
+  --color-chocolate: #725C3F;
+  --color-vanilla: #E5E0D8;
+
+  --font-primary: "Poppins", sans-serif;
+  --font-fun: "Darumadrop One", sans-serif;
 }
 
-#about, #featured, #reviews, #contact {
-    padding: 80px 20px;
+/* ===============================
+   General Text
+   =============================== */
+h2 {
+  font-family: var(--font-fun);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ===============================
+   Header / Navigation
+   =============================== */
+#site-header {
+    background-color: var(--color-caramel);
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Desktop nav menu */
+#site-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#site-header nav ul li a {
+    text-decoration: none;
+    color: var(--color-chocolate);
+    font-weight: 600;
+    font-family: var(--font-primary);
+    transition: color 0.3s ease;
+}
+
+#site-header nav ul li a:hover {
+    color: var(--color-vanilla); 
+}
+
+/* Hamburger button (mobile) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-chocolate);
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+}
+
+/* Mobile menu - hidden by default */
+#primary-menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+/* ===============================
+   Hero Section
+   =============================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-chocolate);
+  overflow: hidden;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(208, 167, 123, 0.418);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-family: var(--font-fun);
+  color: var(--color-chocolate);
+  font-size: clamp(2.5rem, 6vw, 5.4rem);
+  margin-bottom: 20px;
+  text-shadow: 4px 8px var(--color-caramel);
+}
+
+.hero p {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: var(--color-chocolate);
+  text-shadow: 2px 2px var(--color-caramel);
+}
+
+.hero .btn {
+  background: var(--color-chocolate);
+  color: var(--color-vanilla);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: var(--color-caramel);
+  color: var(--color-chocolate);
+}
+
+/* Squiggly SVG at bottom of hero */
+.hero .hero-squiggle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.hero .hero-squiggle svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+/* ===============================
+   About Section
+   =============================== */
+.about-section {
+  padding: 4rem 2rem;
+  background-color: var(--color-lemon);
+  color: var(--color-chocolate);
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative; /* for heart positioning */
+}
+
+.about-image {
+  position: relative;
+  display: inline-block;
+}
+
+.about-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Scattered hearts */
+.about-image .heart {
+  position: absolute;
+  font-size: 1.5rem;
+  color: var(--color-strawberry);
+  animation: floatHeart 3s ease-in-out infinite;
+}
+
+@keyframes floatHeart {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+  50% { transform: translateY(-10px) scale(1.1); opacity: 0.8; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ===============================
+   Featured Section
+   =============================== */
+.featured-section {
+  padding: 4rem 2rem;
+  background-color: var(--color-caramel);
+  color: var(--color-chocolate);
+  text-align: center;
+}
+
+.featured-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 0 auto;
+}
+
+.featured-box {
+  background-color: var(--color-lemon);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.featured-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.featured-box img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.featured-box h3 {
+  font-family: var(--font-fun);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.featured-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ===============================
+   Reviews Section
+   =============================== */
+
+.reviews-section {
+  padding: 4rem 2rem;
+  background-color: var(--color-strawberry);
+  color: var(--color-chocolate);
+  text-align: center;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 0 auto;
+}
+
+.review-box {
+  background-color: var(--color-vanilla);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.review-box p {
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.review-box span {
+  font-weight: 600;
+  color: var(--color-chocolate);
+}
+
+/* ===============================
+   Contact Section
+   =============================== */
+.contact-section {
+  padding: 4rem 2rem;
+  background-color: var(--color-lemon);
+  color: var(--color-chocolate);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-text h2 {
+  font-family: var(--font-fun);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-text p {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ===============================
+   Footer Section
+   =============================== */
+.site-footer {
+    background-color: var(--color-caramel);
+    color: var(--color-chocolate);
+    text-align: center;
+    padding: 4rem 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-squiggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.footer-squiggle svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===============================
+   Responsive Media Queries
+   =============================== */
+
+  /* Hamburger button (mobile) */
+.menu-toggle {
+    display: none; /* hidden by default */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-chocolate);
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    z-index: 1100; /* above menu */
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    /* Show hamburger */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide menu by default */
+    #primary-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-caramel);
+        padding: 1rem 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    /* Show menu when active */
+    #primary-menu.active {
+        display: flex;
+    }
+
+    #primary-menu li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    #site-header nav ul {
+        gap: 0; /* remove gap for vertical menu */
+    }
+}
+
+/* Desktop menu */
+@media (min-width: 769px) {
+    #primary-menu {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+/* Large tablets / small desktops */
+@media (max-width: 1200px) {
+  .featured-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .featured-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reviews-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile / small screens */
+@media (max-width: 768px) {
+  /* Featured section */
+  .featured-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reviews section */
+  .reviews-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact section */
+  .contact-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-image img {
+    margin-bottom: 2rem;
+  }
+
+  /* About section */
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  /* Footer section */
+  .site-footer {
+    padding: 6rem 1rem 2rem;
+  }
+
+  .footer-content p {
+    font-size: 0.95rem;
+  }
 }
