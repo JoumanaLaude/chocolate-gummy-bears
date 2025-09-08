@@ -42,9 +42,13 @@ gummies/
 ---
 
 ## 📝 Notes
-- Requires WordPress 5.0+
-- Make sure `<?php wp_head(); ?>` is in your header and `<?php wp_footer(); ?>` is in your footer so scripts load properly.
-- Tested with PHP 8+.
+- Requires **WordPress 5.0+**
+- Tested with **PHP 8+**
+- Make sure your theme has:
+  - `<?php wp_head(); ?>` inside the `<head>` of your header.php
+  - `<?php wp_footer(); ?>` before the closing `</body>` in your footer.php  
+  (so scripts and styles load properly)
+- This theme was tested locally using **XAMPP**
 
 ---
 
