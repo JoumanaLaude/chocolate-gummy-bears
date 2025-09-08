@@ -15,20 +15,20 @@ Includes a responsive navigation menu with a hamburger toggle, styled with custo
 ---
 
 ## 📂 File Structure
-theme-folder/
-│
+```
+chocogummybears/
 ├── assets/
-│ ├── css/ # Theme styles
-│ ├── js/ # Main JavaScript (menu, scroll, etc.)
-│ └── images/ # Theme images
+│   ├── css/          # Theme styles
+│   ├── js/           # Main JavaScript (menu, scroll, etc.)
+│   └── images/       # Theme images
 │
 ├── footer.php
 ├── functions.php
 ├── header.php
 ├── index.php
-├── style.css # Theme stylesheet with WP theme metadata
+├── style.css         # Theme stylesheet with WP theme metadata
 └── README.md
-
+```
 
 ---
 
