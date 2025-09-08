@@ -45,3 +45,8 @@ chocogummybears/
 - Requires WordPress 5.0+
 - Make sure `<?php wp_head(); ?>` is in your header and `<?php wp_footer(); ?>` is in your footer so scripts load properly.
 - Tested with PHP 8+.
+
+---
+
+## 👀🩷 Preview
+![Theme Screenshot](assets/images/preview-localhost-chocolate-gummy-bears-2025-09-07.png)
