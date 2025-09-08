@@ -16,7 +16,7 @@ Includes a responsive navigation menu with a hamburger toggle, styled with custo
 
 ## 📂 File Structure
 ```
-chocogummybears/
+gummies/
 ├── assets/
 │   ├── css/          # Theme styles
 │   ├── js/           # Main JavaScript (menu, scroll, etc.)
