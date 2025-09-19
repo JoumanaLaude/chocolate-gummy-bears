@@ -52,5 +52,8 @@ gummies/
 
 ---
 
+Hosted statically on Netlify:
+https://choco-gummy-bears.netlify.app/
+
 ## 👀🩷 Preview
 ![Theme Screenshot](assets/images/preview-localhost-chocolate-gummy-bears-2025-09-07.png)
