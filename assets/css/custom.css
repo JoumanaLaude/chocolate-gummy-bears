@@ -226,10 +226,10 @@ h2 {
 }
 
 /* Scattered hearts */
-.about-image .heart {
+.heart {
   position: absolute;
   font-size: 1.5rem;
-  color: var(--color-chocolate);
+  color: var(--color-caramel);
   animation: floatHeart 3s ease-in-out infinite;
 }
 

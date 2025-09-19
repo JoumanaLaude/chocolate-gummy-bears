@@ -27,10 +27,11 @@ get_header();
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/choco-covered-bear.png" alt="About Choco Gummy Bears">
 
         <!-- Scattered hearts -->
-        <span class="heart" style="top: -10px; left: -10px;">❤</span>
-        <span class="heart" style="top: 20px; right: 10px; font-size:1.2rem;">❤</span>
-        <span class="heart" style="bottom: 10px; left: 30px; font-size:1rem;">❤</span>
-        <span class="heart" style="bottom: -5px; right: 20px; font-size:1.3rem;">❤</span>
+        <span class="heart fa-solid fa-heart" style="top: -10px; left: -10px; font-size: 1.5rem;"></span>
+        <span class="heart fa-solid fa-heart" style="top: 20px; right: 10px; font-size: 1.2rem;"></span>
+        <span class="heart fa-solid fa-heart" style="bottom: 10px; left: 30px; font-size: 1rem;"></span>
+        <span class="heart fa-solid fa-heart" style="bottom: -5px; right: 20px; font-size: 1.3rem;"></span>
+
     </div>
     <div class="section-text">
       <h2>About Us</h2>
