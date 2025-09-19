@@ -229,7 +229,7 @@ h2 {
 .about-image .heart {
   position: absolute;
   font-size: 1.5rem;
-  color: var(--color-strawberry);
+  color: var(--color-chocolate);
   animation: floatHeart 3s ease-in-out infinite;
 }
 
