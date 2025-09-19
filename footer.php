@@ -6,11 +6,11 @@
     </div>
 
     <div class="footer-content">
-        <p>&copy; 2025 Chocolate Gummy Bears. All rights reserved.</p>
+        <p>&copy; 2025 Chocolate Gummy Bears by JL. All rights reserved.</p>
     </div>
 </footer>
 
-<?php wp_footer(); ?> <!-- Add this line -->
+<?php wp_footer(); ?>
 
 </body>
 </html>
