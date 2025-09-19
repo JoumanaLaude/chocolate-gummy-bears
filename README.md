@@ -56,4 +56,4 @@ Hosted statically on Netlify:
 https://choco-gummy-bears.netlify.app/
 
 ## 👀🩷 Preview
-![Theme Screenshot](assets/images/preview-localhost-chocolate-gummy-bears-2025-09-07.png)
+![Theme Screenshot](https://github.com/user-attachments/assets/f25b0c46-2252-4c1a-a721-2f95287edb3f)
